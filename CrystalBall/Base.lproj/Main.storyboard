@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ACViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9hs-Xb-ZBT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hyh-68-Jyz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WXs-hi-kOX">
+                                <rect key="frame" x="-5" y="0.0" width="330" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="238" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-Zt-xXa">
+                                <rect key="frame" x="40" y="184" width="238" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Nfq-jh-Sx0"/>
+                                    <constraint firstAttribute="width" constant="238" id="TAj-wn-2UA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fU-dq-7Y5">
+                                <rect key="frame" x="29" y="499" width="261" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="di3-sq-MAW"/>
+                                    <constraint firstAttribute="width" constant="261" id="xng-bo-16D"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="button-off"/>
+                                <state key="highlighted" image="button-on"/>
+                                <connections>
+                                    <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j2M-YM-6HJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WXs-hi-kOX" secondAttribute="trailing" id="45W-pl-BTp"/>
+                            <constraint firstItem="Hyh-68-Jyz" firstAttribute="top" secondItem="9fU-dq-7Y5" secondAttribute="bottom" constant="20" id="Be0-Ww-zM2"/>
+                            <constraint firstItem="C4f-Zt-xXa" firstAttribute="centerX" secondItem="WXs-hi-kOX" secondAttribute="centerX" constant="-1" id="HEG-be-01Q"/>
+                            <constraint firstItem="Hyh-68-Jyz" firstAttribute="top" secondItem="WXs-hi-kOX" secondAttribute="bottom" id="KFC-qw-7wm"/>
+                            <constraint firstAttribute="centerX" secondItem="9fU-dq-7Y5" secondAttribute="centerX" id="Kb6-9q-itE"/>
+                            <constraint firstItem="WXs-hi-kOX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="TgL-A2-Bqq"/>
+                            <constraint firstItem="C4f-Zt-xXa" firstAttribute="centerY" secondItem="WXs-hi-kOX" secondAttribute="centerY" constant="-30" id="WkE-lw-RNA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="predictionLabel" destination="C4f-Zt-xXa" id="MK7-fb-6tV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="320" height="568"/>
+        <image name="button-off" width="261" height="49"/>
+        <image name="button-on" width="261" height="47"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
